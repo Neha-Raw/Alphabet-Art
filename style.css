@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Mochiy Pop One');
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+.front-card {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: aqua;
+    height: 200px;
+    width: 160px;
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(150px, 180px));
+    grid-template-rows: repeat(9, 200px);
+    gap: 15px;
+    justify-content: center;
+    width: 80%;
+    margin-left: 10%;
+
+}
+
+
+@media(max-width: 770px) {
+    .main-container {
+        grid-template-columns: repeat(2, minmax(150px, 200px));
+    }
+}
+
+@media(max-width:360px) {
+    .main-container {
+        grid-template-columns: repeat(1, 200px);
+    }
+}
+
+.back-card {
+    background-color: pink;
+    border-radius: 10px;
+    border: 2px solid black;
+    height: 200px;
+    width: 160px;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.img-class {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.flip-card {
+    width: 160px;
+    height: 200px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.flip-card.flipped {
+    transform: rotateY(180deg);
+}
+
+.text {
+    font-family: 'Mochiy Pop One';
+    font-size: 104px;
+    font-weight: 400;
+    letter-spacing: 0em;
+    line-height: 6px;
+    text-align: center;
+}
+
+
+header {
+   text-align: center;
+}
+
+
+.navigation-bar {
+   background-color: dodgerblue;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   margin-bottom: 20px;
+}
+
+.navigation-bar img {
+   margin-top: 10px;
+   border-radius: 30px;
+}
+
+.nav-item:hover{
+background-color:blue;
+}
+.nav-item p{
+   margin-top: 5px;
+}
+
+footer {
+    background-color: dodgerblue;
+    height: 100%;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.footer-ul {
+    list-style: none;
+}
+
+.footer-ul a {
+    text-decoration: none;
+    color: white;
+}
+
+.sajhe-sapne-logo {
+    border-radius: 50%;
+    height: 80px;
+}
