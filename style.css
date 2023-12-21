@@ -6,9 +6,13 @@ body {
     background-image: url('imges/Background Pattern.svg');
 }
 
-header .alphabet-art-logo{
+header {
     text-align: center;
     width: 100%;
+}
+
+.alphabet-art-logo {
+    width: 50%;
 }
 
 
@@ -45,6 +49,8 @@ header .alphabet-art-logo{
 
 .nav-item p {
     margin-top: 5px;
+    font-family: Mochiy Pop One;
+    color: white;
 }
 
 .crousel-img {
@@ -135,7 +141,7 @@ header .alphabet-art-logo{
     background-image: url('imges/pattern/pattern5.svg');
     background-color: #F26335;
     border-bottom: 5px solid #DA2D65;
-    background-size: 150%;
+    background-size: 200%;
 }
 
 .pattern6 {
@@ -232,7 +238,7 @@ footer {
 
 h2 {
     display: flex;
-    justify-content: center;
+    justify-items: center;
     font-style: oblique;
 }
 
@@ -244,7 +250,7 @@ h2 {
 .div-ul {
     list-style: none;
     margin-top: 30px;
-
+    justify-content: space-between;
 }
 
 .div-ul a {
@@ -326,4 +332,8 @@ h2 {
     margin: 6px;
     color: blue;
     text-align: center;
+}
+.combine-icon{
+    display: flex;
+    justify-content:space-around;
 }

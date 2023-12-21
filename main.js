@@ -4,6 +4,7 @@ const dots = document.querySelectorAll(".dot")
 // console.log(crouselImg)
 let i = 0;
 let alphabet;
+let images;
 
 // crousel ======================================================
 let crousel = [
@@ -45,7 +46,7 @@ for (let i = 65, j = 0, k = 0; i <= 90; i++, j++, k++) {
    let backDiv = document.createElement("div")
    container.appendChild(frontCard)
    container.appendChild(backDiv)
-  
+
    // frontCard.setAttribute("class", "front-card");
    backDiv.setAttribute("class", "back-card")
    frontCard.classList.add("front-card")
@@ -66,6 +67,41 @@ for (let i = 65, j = 0, k = 0; i <= 90; i++, j++, k++) {
    backDiv.appendChild(imageArr)
    //   console.log(imageArr)
 
+
+   // create like icon//---------------------------======================
+
+   let like = document.createElement("img")
+   like.setAttribute("src", "imges/backcard-icons/likes.png")
+   backDiv.appendChild(like);
+
+   // create expend icon==================================
+
+   let expend = document.createElement("img")
+   expend.setAttribute("src","imges/backcard-icons/expend.png")
+   backDiv.appendChild(expend);
+
+   // ====================create share icon ===============================
+
+   let share = document.createElement("img")
+   share.setAttribute("src","imges/backcard-icons/share.png")
+   backDiv.appendChild(share);
+
+   // create div for like,share and expend ===============
+
+   let combineIcon = document.createElement("div")
+   combineIcon.appendChild(like)
+   combineIcon.appendChild(expend)
+   combineIcon.appendChild(share)
+   combineIcon.setAttribute("class","combine-icon")
+   backDiv.appendChild(combineIcon)
+
+    // ---------------spelling------------------
+    
+    let word = document.createElement("p")
+    word.setAttribute("class", "words")
+    word.innerHTML = soundArray[k];
+    backDiv.appendChild(word);
+
    // flipCard=================================
 
    let flipCard = document.createElement("div")
@@ -74,12 +110,6 @@ for (let i = 65, j = 0, k = 0; i <= 90; i++, j++, k++) {
    container.appendChild(flipCard)
    flipCard.setAttribute("class", "flip-card")
    // console.log(flipCard);
-   
- // ---------------spelling------------------
-   let word = document.createElement("p")
-   word.setAttribute("class","words")
-   word.innerHTML= soundArray[k];
-   backDiv.appendChild(word);
 
    flipCard.addEventListener("click", () => {
       flipCard.classList.toggle("flipped")
