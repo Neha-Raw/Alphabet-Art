@@ -6,7 +6,7 @@ body {
     background-image: url('imges/Background Pattern.svg');
 }
 
-header {
+header .alphabet-art-logo{
     text-align: center;
     width: 100%;
 }
@@ -165,16 +165,35 @@ header {
     transform: rotateY(180deg);
 }
 
+@media(min-width:320px) {
+    .main-container {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+    }
+}
+
+@media(min-width:481) {
+    .main-container {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+}
+
 @media (min-width:641px) {
     .main-container {
-        grid-template-columns: repeat(3, minmax(300px, 1fr));
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
     }
 
     .front-card p {
         font-size: 13rem;
     }
-    .back-card p{
+
+    .back-card p {
         font-size: 2rem;
+    }
+}
+
+@media(min-width:961px) {
+    .main-container {
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
     }
 }
 
@@ -186,15 +205,15 @@ header {
     .front-card p {
         font-size: 16rem;
     }
+
     .back-card p {
         font-size: 3rem;
     }
 }
 
-
-@media(max-width:360px) {
+@media(min-width:1281px) {
     .main-container {
-        grid-template-columns: repeat(1, minmax(320px, 1fr));
+        grid-template-columns: repeat(3, minmax(400px, 1fr));
     }
 }
 
@@ -301,7 +320,8 @@ h2 {
     padding: 10px;
     border-radius: 12px;
 }
-.words{
+
+.words {
     font-family: Mochiy Pop One;
     margin: 6px;
     color: blue;
