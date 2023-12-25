@@ -24,7 +24,6 @@ header {
     justify-content: space-around;
     margin-top: 30px;
     margin: auto;
-
 }
 
 .navigation-bar {
@@ -133,7 +132,7 @@ header {
     background-image: url('imges/pattern/pattern4.svg');
     background-color: #F36291;
     border-bottom: 5px solid #DA2D65;
-    background-size: 210%;
+    background-size: 250%;
 }
 
 .pattern5 {
@@ -141,7 +140,7 @@ header {
     background-image: url('imges/pattern/pattern5.svg');
     background-color: #F26335;
     border-bottom: 5px solid #DA2D65;
-    background-size: 200%;
+    background-size: 150%;
 }
 
 .pattern6 {
@@ -333,7 +332,20 @@ h2 {
     color: blue;
     text-align: center;
 }
-.combine-icon{
+
+.fa-icons {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-evenly;
+    font-size: 1em;
+    padding-bottom: 10px;
+    --fa-animation-iteration-count: 1;
+    color: #1F7AE0;
+}
+
+.fa-icons::before {
+    display: none;
+}                                                                         
+
+.fa-icons {
+    font-size: 1.7em;
 }

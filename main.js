@@ -67,40 +67,67 @@ for (let i = 65, j = 0, k = 0; i <= 90; i++, j++, k++) {
    backDiv.appendChild(imageArr)
    //   console.log(imageArr)
 
+   // ---------------spelling------------------
 
+   let word = document.createElement("p")
+   word.setAttribute("class", "words")
+   word.innerHTML = soundArray[k];
+   backDiv.appendChild(word);
+   //===================================//
+
+   let faIcons = document.createElement("div");
+   faIcons.classList.add("fa-icons");
+   backDiv.appendChild(faIcons);
+
+   
    // create like icon//---------------------------======================
 
-   let like = document.createElement("img")
-   like.setAttribute("src", "imges/backcard-icons/likes.png")
-   backDiv.appendChild(like);
+   let like = document.createElement("i")
+   like.classList.add("fa-regular","fa-heart");
+   faIcons.appendChild(like);
 
    // create expend icon==================================
 
-   let expend = document.createElement("img")
-   expend.setAttribute("src","imges/backcard-icons/expend.png")
-   backDiv.appendChild(expend);
+   let expend = document.createElement("i")
+   expend.classList.add("fa-solid","fa-arrow-rotate-left");
+   faIcons.appendChild(expend);
 
    // ====================create share icon ===============================
 
-   let share = document.createElement("img")
-   share.setAttribute("src","imges/backcard-icons/share.png")
-   backDiv.appendChild(share);
+   let share = document.createElement("i")
+   share.classList.add("fa-solid","fa-share-from-square")
+   faIcons.appendChild(share);
 
-   // create div for like,share and expend ===============
+   //=======================flipIcon==============
 
-   let combineIcon = document.createElement("div")
-   combineIcon.appendChild(like)
-   combineIcon.appendChild(expend)
-   combineIcon.appendChild(share)
-   combineIcon.setAttribute("class","combine-icon")
-   backDiv.appendChild(combineIcon)
+   expend.addEventListener("click",(event)=>{
+      flipCard.classList.remove("flipped");
+      event.stopPropagation();
+   });
 
-    // ---------------spelling------------------
-    
-    let word = document.createElement("p")
-    word.setAttribute("class", "words")
-    word.innerHTML = soundArray[k];
-    backDiv.appendChild(word);
+   //============================like icon=======
+   
+   like.addEventListener("click", (event) => {
+      like.classList.toggle("fa-solid");
+      like.style.color = "red";
+      event.stopPropagation();
+
+   });
+
+   //=====================ANIMATION LIKES =============================
+
+   like.addEventListener("mouseover",(event)=>{
+     like.claasList.add("fa-bounce");
+     event.stopPropagation() 
+   });
+
+   //===============================================//
+
+
+   like.addEventListener("mouseleave",(event)=>{
+      like.classList.remove("fa-bounce");
+      event.stopPropagation();
+  });
 
    // flipCard=================================
 
@@ -112,12 +139,12 @@ for (let i = 65, j = 0, k = 0; i <= 90; i++, j++, k++) {
    // console.log(flipCard);
 
    flipCard.addEventListener("click", () => {
-      flipCard.classList.toggle("flipped")
+      flipCard.classList.add("flipped")
 
       let msg = new SpeechSynthesisUtterance();
       msg.text = soundArray[k];
       window.speechSynthesis.speak(msg);
-      console.log(msg)
+      // console.log(msg)
    })
 
 }
