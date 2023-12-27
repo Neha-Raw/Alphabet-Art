@@ -4,70 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>contest</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- <h1>CONTEST</h1> -->
+    <header id="header">
+        <script async src="../header.js"></script>
+    </header>
+    <div class="product-photo"></div>
 
-    <body>
-        <header id="header">
-            <script async src="../header.js"></script>
-        </header>
-        <form>
-            <div>
-                <label for="name">Name *</label><br>
-                <input type="text" placeholder="Name" required><br>
+    <form class="form">
+        <div class="form-body">
+            <div class="row">
+                <div class="input-group">
+                    <label for="Name">Name*</label>
+                    <input type="text" id="Name" placeholder="your name" required />
+                </div>
+                <div class="input-group">
+                    <label for="Surname">Surname*</label>
+                    <input type="text" id="Surname" placeholder="Surname" required />
+                </div>
             </div>
-            <br>
-            <div>
-                <label for="surname">Surname *</label><br>
-                <input id="surname" type="text" placeholder="Surname" required><br>
-            </div>
-            <br>
-            <div>
-                <label for="email-id">Email id *</label><br>
-                <input id="email-id" type="email" placeholder="Email" required><br>
-            </div>
-            <br>
-            <div>
-                <label for="phoneNum">Phone number *</label><br>
-                <input id="phoneNum" type="number" placeholder="+91" required><br>
-            </div>
-            <br>
-            <div>
-                <label for="school name">School name</label><br>
-                <input id="school name" type="text" placeholder="School name" required><br>
-            </div>
-            <br>
-            <div>
-                <label for="address">Address *</label><br>
-                <textarea id="address" cols="30" rows="4"></textarea>
-            </div>
-            <br>
-            <div>
-                <label for="state">State *</label><br>
-                <input id="state" type="text" placeholder="State" required><br>
-            </div>
-            <br>
-            <div>
-                <label for="city">City *</label><br>
-                <input id="city" type="text" placeholder="City" required><br>
-            </div>
-            <br>
-            <div>
-                <label for="pincode">Pincode *</label><br>
-                <input id="pincode" type="number" placeholder="Pincode" required><br>
-            </div>
-            <br>
-            <button>Proceed</button>
-        </form>
 
-        <footer id="footer">
-            <script async src="../footer.js"></script>
-        </footer>
+            <div class="row">
+                <div class="input-group">
+                    <label for="Email-id">Email-id*</label>
+                    <input type="email" id="Email-id" placeholder="@gmail.com" required />
+                </div>
+                <div class="input-group">
+                    <label for="Phone number">Phone number*</label>
+                    <input type="number" id="number" placeholder="+91" required />
+                </div>
+            </div>
 
-    </body>
+            <div class="row">
+                <div class="input-group">
+                    <label for="School*">School *</label>
+                    <input type="text" id="School" placeholder="School" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-group">
+                    <label for="Address*">Address *</label>
+                    <input type="text" id="Address" placeholder="Address" />
+                </div>
+            </div>
+
+            <div class="form-body">
+                <div class="row">
+                    <div class="input-group">
+                        <label for="State">State</label>
+                        <input type="text" id="state" placeholder="State">
+
+                    </div>
+                    <div class="input-group">
+                        <label for="City">City</label>
+                        <input type="text" id="city" placeholder="City">
+
+                    </div>
+                    <div class="input-group">
+                        <label for="pincode">Pincode*</label>
+                        <input type="number" id="pincode" placeholder="Enter pincode" />
+                    </div>
+                </div>
+            </div>
+    </form>
+
+    <footer id="footer">
+        <script async src="../footer.js"></script>
+    </footer>
+</body>
 
 </html>
