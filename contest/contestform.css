@@ -2,9 +2,28 @@
 @import url("https://fonts.googleapis.com/css?family=Mochiy Pop One");
 
 body {
+    margin: 0;
+}
+.art{
     margin: auto;
+    width: 80%;
+    color: #8C97A4;
+    padding: 7px;
+}
+h1 {
+    font-weight: 100;
+    color: #8C97A4;
+    font-family: Roboto;
+    margin-left: 10%;
 }
 
+hr {
+    width: 80%;
+    margin: auto;
+    border: 2px solid #8BC7FF;
+}
+
+/* Logo */
 .logo img {
     display: block;
     margin: 10px auto;
@@ -20,6 +39,7 @@ nav {
     font-weight: 400;
     font-size: 1em;
     color: #FFFFFF;
+    margin-bottom: 30px;
 }
 
 nav div {
@@ -30,7 +50,6 @@ nav div {
     margin-top: 5px;
     margin-bottom: 5px;
     cursor: pointer;
-    /* margin: 5px auto; */
 }
 
 nav div img {
@@ -41,50 +60,74 @@ nav div p {
     margin: 0;
 }
 
-.form-body {
-    background-color: white;
-    /* padding: 5px 10px; */
+.div-text{
+    margin: auto;
+    width: 80%;
 }
 
-.row{
+.upload-photo {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 163px;
+    height: 160px;
+    border-radius: 5px;
+    background-color: #8BC7FF;
+    color: #1375E4;
+    font-family: Mochiy Pop One;
+    font-weight: 400;
+    margin-bottom: 20px;
 }
 
-.input-group{
+.form {
+    font-family: inter;
+    background-color: white;
+    width: 80%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.input-group {
     flex: 1;
     display: flex;
     flex-direction: column;
-    margin: 10px 30px;
-}
-
-label{
-    color: #1375E4;
-    font-size: 25px;
 }
 
 input[type="text"],
 input[type="email"],
-input[type="number"]{
+input[type="number"] {
     width: 100%;
     font-size: 18px;
     height: 34px;
-    padding-left: 10px;
-    padding-right: 10px;
     border-radius: 5px;
     background-color: white;
-    outline: none;
-    border-bottom: 1px solid #d6d6d6;
 }
 
-.call-to-action {
+input {
+    border: 2px solid #8BC7FF;
+}
+
+::placeholder {
+    color: #8BC7FF;
+}
+
+.Make-payment {
     width: 80%;
     display: flex;
-    justify-content: center;
+    flex-direction: row-reverse;
     margin: auto;
     margin-top: 30px;
 }
 
 .pushable {
+    width: 100%;
+    margin: auto;
     background: #1375E4;
     border-radius: 12px;
     border: none;
@@ -93,9 +136,9 @@ input[type="number"]{
     outline-offset: 4px;
 }
 
-.front {
+.Make-payments {
     display: block;
-    padding: 16px 60px;
+    padding: 12px 30px;
     border-radius: 12px;
     font-size: 1.2rem;
     background: #59CDFF;
@@ -103,6 +146,30 @@ input[type="number"]{
     text-shadow: 0px 1px 0px #367DCA;
     color: white;
     transform: translateY(-6px);
+}
+
+label {
+    /* font-family: inter; */
+    font-size: 20px;
+    font-weight: 600;
+    color: #1375E4;
+}
+
+.fas {
+    color: red;
+}
+
+.sapne-waali {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sapne-waali a {
+    font-family: 'Mochiy Pop One';
+    color: #1375E4;
+    margin-top: 5%;
+    font-size: 18px;
 }
 
 footer {
@@ -163,17 +230,49 @@ footer {
 
 @media only screen and (max-width:600px) {
 
-    .row{
+    .row {
         flex-direction: column;
-    }   
+    }
 }
 
-/* #Email-id{
-    width: 103%;
-    min-width: 300px;
+#city {
+    width: 100%;
 }
-#Surname{
-    width: 103%;
-    min-width: 300px;
-} */
 
+#pincode {
+    width: 100%;
+}
+
+.proceed {
+    width: 80%;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: auto;
+    margin-top: 30px;
+  }
+  
+  .pushable {
+    background: #1375E4;
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+  }
+  
+  .front {
+    display: block;
+    padding: 12px 30px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    background: #59CDFF;
+    font-family: 'Mochiy Pop One';
+    text-shadow: 0px 1px 0px #367DCA;
+    color: white;
+    transform: translateY(-6px);
+  }
+  
+  .pushable:active .front {
+    transform: translateY(-2px);
+  }
+  
