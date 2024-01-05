@@ -109,6 +109,7 @@ input[type="number"] {
     background-color: white;
 }
 
+
 input {
     border: 2px solid #8BC7FF;
 }
@@ -116,9 +117,32 @@ input {
 ::placeholder {
     color: #8BC7FF;
 }
+label {
+    font-family: inter;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1375E4;
+}
 
-
-.pushable {
+.proceed {
+    width: 80%;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: auto;
+    margin-top: 30px;
+  }
+   .front {
+    display: block;
+    padding: 12px 30px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    background: #59CDFF;
+    font-family: 'Mochiy Pop One';
+    text-shadow: 0px 1px 0px #367DCA;
+    color: white;
+    transform: translateY(-6px);
+  }
+  .pushable {
     width: 100%;
     margin: auto;
     background: #1375E4;
@@ -128,13 +152,10 @@ input {
     cursor: pointer;
     outline-offset: 4px;
 } 
-
-label {
-    font-family: inter;
-    font-size: 20px;
-    font-weight: 600;
-    color: #1375E4;
-}
+  .pushable:active .front {
+    transform: translateY(-2px);
+  }
+  
 
 .fas {
     color: red;
@@ -209,41 +230,31 @@ footer {
     opacity: 0.9;
 }
 
-@media only screen and (max-width:600px) {
+.pincity{
+    flex:2;
+    display:flex;
+    flex-direction:raw; 
+ }
+@media(max-width:600px) {
 
     .row {
+        display: block;
         flex-direction: column;
+    }
+    .pincity{
+       flex:2;
+       display:flex;
+       flex-direction:raw; 
     }
 }
 
+    
+
 #city {
-    width: 100%;
+    width: 92%;
 }
 
 #pincode {
     width: 100%;
 }
 
-.proceed {
-    width: 80%;
-    display: flex;
-    flex-direction: row-reverse;
-    margin: auto;
-    margin-top: 30px;
-  }
-   .front {
-    display: block;
-    padding: 12px 30px;
-    border-radius: 12px;
-    font-size: 1.2rem;
-    background: #59CDFF;
-    font-family: 'Mochiy Pop One';
-    text-shadow: 0px 1px 0px #367DCA;
-    color: white;
-    transform: translateY(-6px);
-  }
-  
-  .pushable:active .front {
-    transform: translateY(-2px);
-  }
-  
