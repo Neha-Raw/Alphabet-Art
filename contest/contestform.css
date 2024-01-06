@@ -111,7 +111,7 @@ input[type="number"] {
 
 
 input {
-    border: 2px solid #8BC7FF;
+    border: 3px solid #8BC7FF;
 }
 
 ::placeholder {
