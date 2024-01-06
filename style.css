@@ -656,3 +656,9 @@ td{
     font-size: 20px;
   }
 }
+
+.imgContainer{
+  width: auto;
+  min-height: 50%;
+  background-color: blue;
+}

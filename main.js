@@ -38,6 +38,7 @@ for (let i = 65; i <= 90; i++) {
 
     ///-------------------
     let imgContainer = document.createElement("div");
+    imgContainer.setAttribute("class","imgContainer")
     let images = document.createElement("img");
     images.setAttribute("src", `assets/alphabet-images/${alphabet.toLocaleLowerCase()}.png`)
     images.setAttribute("class", "imgClass")
