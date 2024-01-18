@@ -1,33 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Inter');
 @import url("https://fonts.googleapis.com/css?family=Mochiy Pop One");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 
-body {
-    margin: 0;
-}
+
+
+/* /----------------------------Header/ */
+
 .art{
     margin: auto;
     width: 80%;
     color: #8C97A4;
     padding: 7px;
-}
-h1 {
-    font-weight: 100;
-    color: #8C97A4;
-    font-family: Roboto;
-    margin-left: 10%;
-}
 
-hr {
-    width: 80%;
-    margin: auto;
-    border: 2px solid #8BC7FF;
 }
-
-.div-text{
-    margin: auto;
-    width: 80%;
-}
-
 .upload-photo {
     display: flex;
     justify-content: center;
@@ -36,56 +21,148 @@ hr {
     height: 160px;
     border-radius: 5px;
     background-color: #8BC7FF;
-    color: #1375E4;
+    color: #1375E4; 
     font-family: Mochiy Pop One;
     font-weight: 400;
     margin-bottom: 20px;
 }
 
+
+/* Logo */
+.logo img {
+  display: block;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.div-text {
+  padding: 10px;
+  width: 80%;
+  margin: auto;
+  color: #8C97A4;
+  font-family: Roboto;
+  font-weight: 400;
+}
+
+/* /---------  --------------form/ */
 form {
-    font-family: inter;
-    background-color: white;
-    width: 80%;
-    margin: auto;
+  font-family: 'Inter';
+  width: 80%;
+  margin: auto;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 10px;
+
+label {
+  display: block;
+  color: #1375E4;
+  font-size: 15px;
+  font-weight: 600;
 }
 
-.input-group {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+input {
+  width: 90%;
+  display: block;
+  border: 1px solid #8BC7FF;
+  font-weight: 400;
+  padding: 0 12px 0 12px;
+
 }
 
 input[type="text"],
 input[type="email"],
 input[type="number"] {
-    width: 100%;
-    font-size: 18px;
-    height: 34px;
-    border-radius: 5px;
-    background-color: white;
-}
-
-
-input {
-    border: 3px solid #8BC7FF;
+  font-size: 14px;
+  height: 34px;
+  border-radius: 8px;
 }
 
 ::placeholder {
-    color: #8BC7FF;
+  color: #8BC7FF;
 }
-label {
-    font-family: inter;
-    font-size: 20px;
-    font-weight: 600;
-    color: #1375E4;
+
+
+@media (min-width:568px) {
+  form {
+    display: grid;
+    grid-template-columns: repeat(7 1fr);
+    grid-template-rows: repeat(2 1fr);
+    font-family: 'Inter';
+    width: 80%;
+    margin: auto;
+  }
+
+  .name-div {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+  }
+
+  .email-div {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .number-div {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .school-div {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  .add-div {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+
+  .state-div {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+
+  .city-div {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+
+  .pin-div {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+  #state{
+    width: 80%;
+  }
+  #city{
+    width: 80%;
+
+  }
+  #pincode{
+    width: 80%;
+
+  }
+
 }
+
+
+
 
 .proceed {
     width: 80%;
@@ -93,8 +170,9 @@ label {
     flex-direction: row-reverse;
     margin: auto;
     margin-top: 30px;
-  }
-   .front {
+}
+
+.front {
     display: block;
     padding: 12px 30px;
     border-radius: 12px;
@@ -104,8 +182,9 @@ label {
     text-shadow: 0px 1px 0px #367DCA;
     color: white;
     transform: translateY(-6px);
-  }
-  .pushable {
+}
+
+.pushable {
     width: 100%;
     margin: auto;
     background: #1375E4;
@@ -114,11 +193,12 @@ label {
     padding: 0;
     cursor: pointer;
     outline-offset: 4px;
-} 
-  .pushable:active .front {
+}
+
+.pushable:active .front {
     transform: translateY(-2px);
-  }
-  
+}
+
 .fas {
     color: red;
 }
@@ -135,32 +215,3 @@ label {
     margin-top: 5%;
     font-size: 18px;
 }
-
-.pincity{
-    flex:2;
-    display:flex;
-    flex-direction:raw; 
- } 
-@media(max-width:600px) {
-
-    .row {
-        display: block;
-        flex-direction: column;
-    }
-    .pincity{
-       flex:2;
-       display:flex;
-       flex-direction:raw; 
-    }
-}
-
-    
-
-#city {
-    width: 92%;
-}
-
-#pincode {
-    width: 100%;
-}
-
