@@ -38,13 +38,10 @@ for (let i = 65; i <= 90; i++) {
 
     ///-------------------
     let imgContainer = document.createElement("div");
-    imgContainer.setAttribute("class","imgContainer")
-    let images = document.createElement("img");
-    images.setAttribute("src", `assets/alphabet-images/${alphabet.toLocaleLowerCase()}.png`)
-    images.setAttribute("class", "imgClass")
-    imgContainer.appendChild(images);
+    let alphabetImg = document.createElement("img");
+    alphabetImg.src = `./assets/alphabet-image/${alphabet}.png`;
+    imgContainer.appendChild(alphabetImg);
     frontCard.appendChild(imgContainer);
-
     // alphabetImg.src = `https://placehold.co/312x256/pink/white?text=${alphabet}`;
 
     //word for the alphabet
