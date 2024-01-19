@@ -48,31 +48,6 @@ nav div p {
   margin: 0;
 }
 
-/* Carousel */
-.carousel img {
-  width: 100%;
-  max-height: 350px;
-  object-fit: cover;
-}
-
-.dots {
-  display: flex;
-  justify-content: center;
-  margin-top: -20px;
-}
-
-.dots span {
-  display: inline-flex;
-  width: 5px;
-  height: 5px;
-  margin: 0 3px;
-  background-color: #59AFFF;
-  border-radius: 50%;
-}
-
-#dot0 {
-  background-color: white;
-}
 
 /* 3D button */
 .gallery {
