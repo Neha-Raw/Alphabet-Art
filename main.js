@@ -1,12 +1,12 @@
 //All words
-let words = ["Alligator","Bee","Cat",
-             "Dinosaur","Elephant","Fox",
-             "Giraffe","House","Igloo",
-             "Jellyfish","King","Ladybug",
-             "Mountains","Ninja","Octopus",
-             "Pirate","Queen","Rainbow",
-             "Strawberry", "Tree", "Unicorn",
-             "Volcano","Watermelon","Xylophone",
+let words = ["Alian","Butterfly","Cat",
+             "Dinosaur","Eagle","Flower",
+             "Giraffe","Hammer","Ice",
+             "Jellyfish","Key","Lamp",
+             "Mountains","Ninja","Omelette",
+             "Pirate","Queen","Rabbit",
+             "Snowman", "Tree", "Unicorn",
+             "Volcano","Watermelon","X-ray",
              "Yo-yo","Zebra"]
 
 //Set up text to speech
