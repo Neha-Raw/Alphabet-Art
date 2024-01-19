@@ -3,28 +3,32 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
 
-
 /* /----------------------------Header/ */
 
-.art{
-    margin: auto;
-    width: 80%;
-    color: #8C97A4;
-    padding: 7px;
+#file {
+  display: none;
+}
+
+.art {
+  margin: auto;
+  width: 80%;
+  color: #8C97A4;
+  padding: 7px;
 
 }
+
 .upload-photo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 163px;
-    height: 160px;
-    border-radius: 5px;
-    background-color: #8BC7FF;
-    color: #1375E4; 
-    font-family: Mochiy Pop One;
-    font-weight: 400;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 163px;
+  height: 160px;
+  border-radius: 5px;
+  background-color: #8BC7FF;
+  color: #1375E4;
+  font-family: Mochiy Pop One;
+  font-weight: 400;
+  margin-bottom: 20px;
 }
 
 
@@ -55,8 +59,10 @@ form {
 label {
   display: block;
   color: #1375E4;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-family: 'inter';
 }
 
 input {
@@ -65,13 +71,12 @@ input {
   border: 1px solid #8BC7FF;
   font-weight: 400;
   padding: 0 12px 0 12px;
-
 }
 
 input[type="text"],
 input[type="email"],
 input[type="number"] {
-  font-size: 14px;
+  font-size: 18px;
   height: 34px;
   border-radius: 8px;
 }
@@ -80,8 +85,12 @@ input[type="number"] {
   color: #8BC7FF;
 }
 
+#upload-input {
+  border: none;
+  outline: none;
+}
 
-@media (min-width:568px) {
+@media (min-width:768px) {
   form {
     display: grid;
     grid-template-columns: repeat(7 1fr);
@@ -92,71 +101,65 @@ input[type="number"] {
   }
 
   .name-div {
-    grid-column-start: 1;
-    grid-column-end: 7;
-    grid-row-start: 1;
-    grid-row-end: 2;
-
+    grid-area: 1/ 1/ 2/ 7;
   }
 
   .email-div {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-area: 2/ 1/ 3/ 5;
   }
 
   .number-div {
-    grid-column-start: 4;
-    grid-column-end: 7;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-area: 2/ 5/ 3/ 7;
   }
 
   .school-div {
-    grid-column-start: 1;
-    grid-column-end: 7;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-area: 3/1/ 4/ 7;
   }
 
   .add-div {
-    grid-column-start: 1;
-    grid-column-end: 7;
-    grid-row-start: 4;
-    grid-row-end: 5;
+    grid-area: 4/ 1/ 5/ 7;
   }
 
   .state-div {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 5;
-    grid-row-end: 6;
+    grid-area: 5/ 1/ 6/ 4;
   }
 
   .city-div {
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 5;
-    grid-row-end: 6;
+    grid-area: 5/ 4/ 6/ 5;
   }
 
   .pin-div {
-    grid-column-start: 5;
-    grid-column-end: 7;
-    grid-row-start: 5;
-    grid-row-end: 6;
+    grid-area: 5/ 6/ 6/ 7;
   }
-  #state{
-    width: 80%;
+
+  #state {
+    width: 83%;
   }
-  #city{
-    width: 80%;
+
+  #number{
+    width: 100%;
+  }
+
+  #city {
+    width: 84%;
 
   }
-  #pincode{
-    width: 80%;
 
+  #pincode {
+    width: 100%;
+
+  }
+
+  #name {
+    width: 100%;
+  }
+
+  #school {
+    width: 100%;
+  }
+
+  #address {
+    width: 100%;
   }
 
 }
@@ -165,53 +168,53 @@ input[type="number"] {
 
 
 .proceed {
-    width: 80%;
-    display: flex;
-    flex-direction: row-reverse;
-    margin: auto;
-    margin-top: 30px;
+  width: 80%;
+  display: flex;
+  flex-direction: row-reverse;
+  margin: auto;
+  margin-top: 30px;
 }
 
 .front {
-    display: block;
-    padding: 12px 30px;
-    border-radius: 12px;
-    font-size: 1.2rem;
-    background: #59CDFF;
-    font-family: 'Mochiy Pop One';
-    text-shadow: 0px 1px 0px #367DCA;
-    color: white;
-    transform: translateY(-6px);
+  display: block;
+  padding: 12px 30px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  background: #59CDFF;
+  font-family: 'Mochiy Pop One';
+  text-shadow: 0px 1px 0px #367DCA;
+  color: white;
+  transform: translateY(-6px);
 }
 
 .pushable {
-    width: 100%;
-    margin: auto;
-    background: #1375E4;
-    border-radius: 12px;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    outline-offset: 4px;
+  width: 100%;
+  margin: auto;
+  background: #1375E4;
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
 }
 
 .pushable:active .front {
-    transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .fas {
-    color: red;
+  color: red;
 }
 
 .sapne-waali {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sapne-waali a {
-    font-family: 'Mochiy Pop One';
-    color: #1375E4;
-    margin-top: 5%;
-    font-size: 18px;
+  font-family: 'Mochiy Pop One';
+  color: #1375E4;
+  margin-top: 5%;
+  font-size: 18px;
 }
