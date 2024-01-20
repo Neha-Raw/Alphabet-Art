@@ -42,6 +42,20 @@ for(let i=65; i<=90; i++){
     alphabetImg.src = `https://placehold.co/312x256/pink/white?text=${alphabet}`;
     imgContainer.appendChild(alphabetImg);
     frontCard.appendChild(imgContainer);
+
+// overlay--
+
+    let overLayDiv = document.createElement("div")
+    overLayDiv.classList.add("overlay-div")
+    container.appendChild(overLayDiv)
+    let overLayImg = document.createElement("img")
+    overLayImg.classList.add("oveylay-img")
+    overLayDiv.appendChild(overLayImg)
+    imgContainer.addEventListener("click", () => {
+        overLayDiv.style.display = "block";
+        overLayDiv.src = alphabetImg.src;
+
+    })
         //word for the alphabet
     let word = document.createElement("p");
     word.innerText = words[i - 65];
