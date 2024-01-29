@@ -1,13 +1,13 @@
 //All words
-let words = ["Alligator", "Bee", "Cat",
-    "Dinosaur", "Elephant", "Fox",
-    "Giraffe", "House", "Igloo",
-    "Jellyfish", "King", "Ladybug",
-    "Mountains", "Ninja", "Octopus",
-    "Pirate", "Queen", "Rainbow",
-    "Strawberry", "Tree", "Unicorn",
-    "Volcano", "Watermelon", "Xylophone",
-    "Yo-yo", "Zebra"]
+let words = ["Alien", "Butterfly", "Cat",
+    "Dinosaur", "Eagle", "Flower",
+    "Giraffe", "Hammer", "Ice",
+    "Jellyfish", "Keys", "Lamp",
+    "Mountains", "Ninja", "Omelette",
+    "Pirate", "Queen", "Rabbit",
+    "Snowman", "Tree", "Unicorn",
+    "Volcano", "Watermelon", "X-Ray",
+    "Yak", "Zebra"]
 
 //Set up text to speech
 var msg = new SpeechSynthesisUtterance();
@@ -22,7 +22,6 @@ for (let i = 65; i <= 90; i++) {
     container.appendChild(card);
 
     //overlay====
-
 
     //backcard
     let backCard = document.createElement("div");
@@ -40,13 +39,11 @@ for (let i = 65; i <= 90; i++) {
     //alphabet image
     let imgContainer = document.createElement("div");
     let alphabetImg = document.createElement("img");
-    alphabetImg.src = `https://placehold.co/312x256/pink/white?text=${alphabet}`;
+    alphabetImg.src = `./assets/alphabet_images/${alphabet}.png`;
     imgContainer.appendChild(alphabetImg);
     frontCard.appendChild(imgContainer);
 
     //overlay--
-
-    
 
     //word for the alphabet
     let word = document.createElement("p");
@@ -60,26 +57,34 @@ for (let i = 65; i <= 90; i++) {
     let likeIcon = document.createElement("i");
     likeIcon.classList.add("fa-regular", "fa-heart");
     faIcons.appendChild(likeIcon);
-    //Flip Icon
-    let flipIcon = document.createElement("i");
-    flipIcon.classList.add("fa-solid", "fa-arrow-rotate-left");
-    faIcons.appendChild(flipIcon);
-    //Share Icon
+        //Sound Icon
+    let soundIcon = document.createElement("i");
+    soundIcon.classList.add("fa-solid", "fa-volume-high");
+    faIcons.appendChild(soundIcon);
+        //Share Icon
     let shareIcon = document.createElement("i");
     shareIcon.classList.add("fa-solid", "fa-share-from-square");
     faIcons.appendChild(shareIcon);
 
     //Show front card on click
     card.addEventListener("click", () => {
-        card.classList.add("flipped");
-        msg.text = words[i - 65];
-        window.speechSynthesis.speak(msg);
+        card.classList.toggle("flipped");
+        if(card.classList.contains("flipped")) {
+            msg.text = words[i-65];
+            window.speechSynthesis.speak(msg);
+        }
     })
 
-    //Flip back on click
-    flipIcon.addEventListener("click", (event) => {
-        card.classList.remove("flipped");
-        event.stopPropagation();
+    // Animate star icon on click
+    soundIcon.addEventListener("click",(event)=>{
+        soundIcon.classList.add("fa-beat");
+        window.speechSynthesis.speak(msg);
+        event.stopPropagation(); 
+    })
+
+    soundIcon.addEventListener("mouseleave",(event)=>{
+        soundIcon.classList.remove("fa-beat");
+        event.stopPropagation(); 
     })
 
     //Color the heart red when user clicks like
@@ -99,6 +104,20 @@ for (let i = 65; i <= 90; i++) {
         event.stopPropagation();
     })
 
+    shareIcon.addEventListener("mouseover",(event)=>{
+        shareIcon.classList.add("fa-fade");
+        event.stopPropagation();
+    })
+
+    shareIcon.addEventListener("mouseleave",(event)=>{
+        shareIcon.classList.remove("fa-fade");
+        event.stopPropagation();
+    })
+
+    shareIcon.addEventListener("click",(event)=>{
+        event.stopPropagation();
+    })
+
 }
 
 // Give design background to back of each alphabet card
@@ -113,25 +132,3 @@ allBackCards.forEach((backCard) => {
     backCard.classList.add(patterns[j]);
     j++;
 })
-
-
-// Carousel
-let carouselImages = ["https://placehold.co/375x187/orange/white?text=Stickers", "https://placehold.co/375x187/green/white?text=Workshop", "https://placehold.co/375x187/purple/white?text=Contest"];
-let carouselImg = document.querySelector(".carousel img");
-let i = 0;
-
-let dots = document.querySelectorAll(".dot");
-
-setInterval(function () {
-    //move images every 4 seconds
-    i++;
-    if (i > 2)
-        i = 0;
-    carouselImg.src = carouselImages[i];
-
-    //color dots corresponding to the image
-    let currentDotId = "#dot" + i;
-    let currentDot = document.querySelector(currentDotId);
-    dots.forEach((dot) => (dot.style.backgroundColor = "#59AFFF"));
-    currentDot.style.backgroundColor = "white";
-}, 4000)
