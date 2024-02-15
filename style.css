@@ -426,7 +426,7 @@ td{
 /* Media query to change grid count and text size for different screen sizes */
 @media (min-width:320px) {
   .container {
-    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    grid-template-columns: repeat(2, minmax(150px, 1fr));                                                 
   }
 
   .backCard p {
